@@ -1,0 +1,62 @@
+INFO:Detectors:
+Contract locking ether found:
+        Contract FixedSupplyToken (contracts/FixedSupplyToken.sol#105-229) has payable functions:
+         - FixedSupplyToken.fallback() (contracts/FixedSupplyToken.sol#217-219)
+        But does not have a function to withdraw the ether
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#contracts-that-lock-ether
+
+INFO:Detectors:
+Owned.transferOwnership(address)._newOwner (contracts/FixedSupplyToken.sol#89) lacks a zero-check on :
+                - newOwner = _newOwner (contracts/FixedSupplyToken.sol#90)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+
+INFO:Detectors:
+SafeMath.div(uint256,uint256) (contracts/FixedSupplyToken.sol#37-40) is never used and should be removed
+SafeMath.mul(uint256,uint256) (contracts/FixedSupplyToken.sol#33-36) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+
+INFO:Detectors:
+Pragma version^0.4.24 (contracts/FixedSupplyToken.sol#5) allows old versions
+solc-0.4.24 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+INFO:Detectors:
+Parameter Owned.transferOwnership(address)._newOwner (contracts/FixedSupplyToken.sol#89) is not in mixedCase
+Variable FixedSupplyToken._totalSupply (contracts/FixedSupplyToken.sol#111) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+
+INFO:Detectors:
+totalSupply() should be declared external:
+        - ERC20Interface.totalSupply() (contracts/FixedSupplyToken.sol#49)
+        - FixedSupplyToken.totalSupply() (contracts/FixedSupplyToken.sol#133-135)
+balanceOf(address) should be declared external:
+        - ERC20Interface.balanceOf(address) (contracts/FixedSupplyToken.sol#50)
+        - FixedSupplyToken.balanceOf(address) (contracts/FixedSupplyToken.sol#141-143)
+allowance(address,address) should be declared external:
+        - ERC20Interface.allowance(address,address) (contracts/FixedSupplyToken.sol#51)
+        - FixedSupplyToken.allowance(address,address) (contracts/FixedSupplyToken.sol#196-198)
+transfer(address,uint256) should be declared external:
+        - ERC20Interface.transfer(address,uint256) (contracts/FixedSupplyToken.sol#52)
+        - FixedSupplyToken.transfer(address,uint256) (contracts/FixedSupplyToken.sol#151-156)
+approve(address,uint256) should be declared external:
+        - ERC20Interface.approve(address,uint256) (contracts/FixedSupplyToken.sol#53)
+        - FixedSupplyToken.approve(address,uint256) (contracts/FixedSupplyToken.sol#167-171)
+transferFrom(address,address,uint256) should be declared external:
+        - ERC20Interface.transferFrom(address,address,uint256) (contracts/FixedSupplyToken.sol#54)
+        - FixedSupplyToken.transferFrom(address,address,uint256) (contracts/FixedSupplyToken.sol#183-189)
+receiveApproval(address,uint256,address,bytes) should be declared external:
+        - ApproveAndCallFallBack.receiveApproval(address,uint256,address,bytes) (contracts/FixedSupplyToken.sol#67)
+transferOwnership(address) should be declared external:
+        - Owned.transferOwnership(address) (contracts/FixedSupplyToken.sol#89-91)
+acceptOwnership() should be declared external:
+        - Owned.acceptOwnership() (contracts/FixedSupplyToken.sol#92-97)
+approveAndCall(address,uint256,bytes) should be declared external:
+        - FixedSupplyToken.approveAndCall(address,uint256,bytes) (contracts/FixedSupplyToken.sol#206-211)
+fallback() should be declared external:
+        - FixedSupplyToken.fallback() (contracts/FixedSupplyToken.sol#217-219)
+transferAnyERC20Token(address,uint256) should be declared external:
+        - FixedSupplyToken.transferAnyERC20Token(address,uint256) (contracts/FixedSupplyToken.sol#225-227)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external
+
+INFO:Slither:. analyzed (5 contracts with 75 detectors), 20 result(s) found
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration

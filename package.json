@@ -1,0 +1,23 @@
+{
+  "name": "FixedSupplyToken",
+  "version": "1.0.0",
+  "description": "HECO Contract Address: https://hecoinfo.com/address/0xf8935602c8d7cdbd0b0b82f66657fc616985f8ed#code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsmjsm/FixedSupplyToken.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsmjsm/FixedSupplyToken/issues"
+  },
+  "homepage": "https://github.com/jsmjsm/FixedSupplyToken#readme",
+  "devDependencies": {
+    "hardhat": "^2.3.0"
+  }
+}
